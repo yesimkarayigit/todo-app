@@ -1,8 +1,10 @@
-import { TODO_ACTIONS } from '../constants';
+import { TODO_ACTIONS, IMAGE_ACTIONS } from '../constants';
 const { v4: uuid } = require('uuid');
 
 const INITIAL_STATE = {
-  list: []
+  list: [],
+  image: {},
+  message: ''
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
@@ -34,6 +36,18 @@ export const reducer = (state = INITIAL_STATE, action) => {
         list: state.list.filter((item) => {
           return item.id !== action.payload
         })
+      } 
+
+    case IMAGE_ACTIONS.GET_IMAGE:
+      return {
+        ...state,
+        image: action.payload,
+      }
+
+    case IMAGE_ACTIONS.GET_IMAGE_ERROR:
+      return {
+        ...state,
+        message: action.payload,
       }
 
     default: return state;

@@ -1,6 +1,10 @@
 export const TODO_ACTIONS = {
   ADD: 'ADD',
-  EDIT: 'EDIT',
   DELETE: 'DELETE',
   TOGGLE: 'TOGGLE'
+};
+
+export const IMAGE_ACTIONS = {
+  GET_IMAGE: 'GET_IMAGE',
+  GET_IMAGE_ERROR: 'GET_IMAGE_ERROR'
 };

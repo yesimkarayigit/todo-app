@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import TodoList from './components/TodoList';
-import { addTodo } from './store/actions/index';
+import { addTodo } from './store/actions';
+import Header from './components/Header';
 import './assets/style.scss';
 
 const App = (props) => {
@@ -10,6 +11,7 @@ const App = (props) => {
   return (
     <div className="App">
       <h1>TODO App</h1>
+      <Header />
       <div className="add-todo-container">
         <input 
           placeholder="Add item" 
