@@ -13,10 +13,10 @@ const Header = (props) => {
     <div className="header">
       <div className="header-background">
         <img className="header-background-image" src={backgroundImage} alt="unsplash"/>
-        <div className="header-text">
-          <button onClick={() => props.getImage()}>Change Background</button>
-          <p>Your Things</p>
-          <p>{today}</p>
+        <div className="header-text-box">
+          <button className="header-button" onClick={() => props.getImage()}>Change Background</button>
+          <p className="header-text">Today</p>
+          <p className="header-text">{today}</p>
         </div>
       </div>
     </div>

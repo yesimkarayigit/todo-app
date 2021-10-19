@@ -10,11 +10,15 @@
   justify-content: center;
   align-items: center;
   font-family: Raleway;
+  background-color: #fff2d7;
 }
 
 .container {
-  width: 300px;
-  height: 600px;
+  width: 400px;
+  height: 700px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  background-color: #ffe09d;
 }
 
 .header {
@@ -25,6 +29,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    border-radius: 4px 4px 0 0;
 
     .header-background-image {
       width: 100%;
@@ -35,12 +40,92 @@
       opacity: 0.6;
     }
 
-    .header-text {
+    .header-text-box {
       position: relative;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 12px 6px;
+
+      .header-button {
+        border: none;
+        align-self: flex-end;
+        width: 28%;
+        padding: 6px;
+        border-radius: 4px;
+        background-color: #1e3d59;;
+        font-weight: 500;
+        color: #fff;
+        user-select: none;
+        cursor: pointer;
+      }
+
+      .header-text {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 500;
+
+        &:last-child {
+          font-size: 14px;
+        }
+      }
     }
+    
   }
 }
 
-.completed {
-  opacity: .4;
+.add-todo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 6px;
+
+  .add-todo-input {
+    border: 2px solid #f5f0e1;
+    background-color: #f5f0e1;
+    outline: none;
+    width: 300px;
+    height: 32px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .add-todo-button {
+    border: none;
+    width: 80px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #1e3d59;
+    color: #fff;
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+.todo-list-wrapper {
+  padding: 12px 6px;
+  font-size: 16px;
+  font-weight: 600;
+
+  .todo-list-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    .completed {
+      opacity: .4;
+    }
+
+    .todo-list-text {
+      width: 80%;
+    }
+
+    .todo-list-icon-box {
+      .todo-list-icon:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
 }

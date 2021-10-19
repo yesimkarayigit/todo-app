@@ -8,11 +8,14 @@ const AddTodo = (props) => {
   return (
     <div className="add-todo-wrapper">
       <input 
-        placeholder="Add item"
+        placeholder="New things"
         value={text} 
         onChange={e => setText(e.target.value)}
+        className="add-todo-input"
       />
-      <button onClick={() => {
+      <button className="add-todo-button" onClick={() => {
+        if (!text && text.length < 1) return;
+
         setText('')
         props.addTodo(text)} }>Add</button>
     </div>

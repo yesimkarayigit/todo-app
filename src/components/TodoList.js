@@ -7,13 +7,18 @@ const TodoList = (props) => {
   return (
     <div className="todo-list-wrapper">
       { props.list.map((todo) => {
-        const todoStyle = clsx({ "completed": todo.isCompleted })
+        const todoStyle = clsx({
+          "todo-list-text": true,
+          "completed": todo.isCompleted
+        })
 
         return (
-          <div key={todo.id} >
+          <div className="todo-list-box" key={todo.id} >
             <span className={todoStyle}>{todo.text}</span>
-            <span onClick={() => props.toggleTodo(todo.id)}>{todo.isCompleted ? '👏' :'✅' }</span>
-            <span onClick={() => props.deleteTodo(todo.id)}>🔥</span>
+            <div className="todo-list-icon-box">
+              <span className="todo-list-icon" onClick={() => props.toggleTodo(todo.id)}>{todo.isCompleted ? '👏' :'✅' }</span>
+              <span className="todo-list-icon" onClick={() => props.deleteTodo(todo.id)}>🔥</span>
+            </div>
           </div>
         )
       }) }
