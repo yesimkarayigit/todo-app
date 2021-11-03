@@ -3,6 +3,10 @@
 This is a simple to-do application. The goal here was to learn how to use React and React-Redux.
 
 # Demo
+
+https://user-images.githubusercontent.com/37299843/137937750-fe270c17-dd66-4841-ac53-629b6b9683ff.mov
+
+
 ## Available Scripts
 
 In the project directory, you can run:
